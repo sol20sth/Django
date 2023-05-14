@@ -1,0 +1,9 @@
+<div>
+{% if article.image %}
+  <img src="{{article.image_thumbnail.url}}" alt="">
+{% endif %}
+  <p>글 번호 : {{article.id}}</p>
+  <p><a href="{% url 'articles:detail' article.pk %}">글 제목 : {{article.title}}</a></p>
+  <p>글 내용 : {{article.content}}</p>
+  <hr>
+</div>
